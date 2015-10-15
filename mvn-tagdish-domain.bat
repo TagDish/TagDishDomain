@@ -1,0 +1,1 @@
+mvn install:install-file -DgeneratePom=true -DcreateChecksum=false -Dpackaging=jar -DgroupId=com.tagdish -DartifactId=tagdishdomain -Dversion=1.0 -Dfile=.\target\tagdishdomain-0.0.1-SNAPSHOT.jar
