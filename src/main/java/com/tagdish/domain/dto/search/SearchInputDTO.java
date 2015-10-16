@@ -10,7 +10,7 @@ public class SearchInputDTO extends TagDishInputDTO implements Serializable {
 
 	private String searchKeyWord;
 	private int startIndex;
-	private String transactionId;
+	
 	
 	public String getSearchKeyWord() {
 		return searchKeyWord;
@@ -23,11 +23,5 @@ public class SearchInputDTO extends TagDishInputDTO implements Serializable {
 	}
 	public void setStartIndex(int startIndex) {
 		this.startIndex = startIndex;
-	}
-	public String getTransactionId() {
-		return transactionId;
-	}
-	public void setTransactionId(String transactionId) {
-		this.transactionId = transactionId;
 	}	
 }

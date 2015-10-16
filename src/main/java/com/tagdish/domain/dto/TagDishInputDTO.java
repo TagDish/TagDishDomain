@@ -9,10 +9,18 @@ public abstract class TagDishInputDTO implements Serializable {
 
 	private static final long serialVersionUID = 9093346764232251604L;
 
+	private String transactionId;
 	private Location location;
 	private Address Address;
 	private String typeOfAddress;
-	
+	private long timestamp;
+
+	public String getTransactionId() {
+		return transactionId;
+	}
+	public void setTransactionId(String transactionId) {
+		this.transactionId = transactionId;
+	}	
 	public String getTypeOfAddress() {
 		return typeOfAddress;
 	}
@@ -31,4 +39,10 @@ public abstract class TagDishInputDTO implements Serializable {
 	public void setAddress(Address address) {
 		Address = address;
 	}
+	public long getTimestamp() {
+		return timestamp;
+	}
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
+	}	
 }
