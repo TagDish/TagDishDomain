@@ -42,6 +42,9 @@ public class DishSearch implements Serializable {
 	@Field(type = FieldType.Nested)
 	private Location location;	
 	
+	@Field(type = FieldType.Long)
+	private Long zipCode;	
+	
 	// Auto calculated value
 	private Float distance;
 	
@@ -92,6 +95,12 @@ public class DishSearch implements Serializable {
 	}
 	public void setLocation(Location location) {
 		this.location = location;
+	}	
+	public Long getZipCode() {
+		return zipCode;
+	}
+	public void setZipCode(Long zipCode) {
+		this.zipCode = zipCode;
 	}	
 	public Float getDistance() {
 		return distance;
