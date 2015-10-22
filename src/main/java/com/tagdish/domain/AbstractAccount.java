@@ -1,10 +1,10 @@
 package com.tagdish.domain;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.data.elasticsearch.annotations.MultiField;
@@ -13,21 +13,12 @@ public class AbstractAccount implements Serializable {
 	
 	private static final long serialVersionUID = 3693706551655336125L;
 
-	@Id
-	private Long restaurantId;
-	
-	@Field(type=FieldType.String)
-	private String restaurantName;
-	
 	@Field(type=FieldType.String)
 	private String hourOfOperation;
 	
-	@Field(type=FieldType.Long)
-	private Long phoneNumber;
+	@Field(type=FieldType.String)
+	private String phoneNumber;
 	
-	@Field(type = FieldType.String)
-	private String restaurantType;
-
 	@Field(type=FieldType.Float)
 	private Float avgCostPerPerson;
 	
@@ -36,6 +27,9 @@ public class AbstractAccount implements Serializable {
 	
 	@Field(type=FieldType.String)
 	private String parkingDesc;
+	
+	@Field(type=FieldType.String)
+	private String paymentOptions;
 	
 	@MultiField(
 	            mainField = @Field(type = FieldType.String)
@@ -68,39 +62,33 @@ public class AbstractAccount implements Serializable {
 	
 	@Field(type=FieldType.String)
 	private String additionalDetails;
+	
+	@Field(type=FieldType.String)
+	private String status;
+	
+	@Field(type=FieldType.Date)
+	private Timestamp createdDate;
 
+	@Field(type=FieldType.Date)
+	private Timestamp updatedDate;
+	
+	@Field(type=FieldType.Integer)
+	private int deleted;
+	
 	@Field(type=FieldType.Float)
 	private Float yelpRating;
 
-	public Long getRestaurantId() {
-		return restaurantId;
-	}
-	public void setRestaurantId(Long restaurantId) {
-		this.restaurantId = restaurantId;
-	}
-	public String getRestaurantName() {
-		return restaurantName;
-	}
-	public void setRestaurantName(String restaurantName) {
-		this.restaurantName = restaurantName;
-	}
 	public String getHourOfOperation() {
 		return hourOfOperation;
 	}
 	public void setHourOfOperation(String hourOfOperation) {
 		this.hourOfOperation = hourOfOperation;
 	}
-	public Long getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(Long phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-	public String getRestaurantType() {
-		return restaurantType;
-	}
-	public void setRestaurantType(String restaurantType) {
-		this.restaurantType = restaurantType;
 	}
 	public Float getAvgCostPerPerson() {
 		return avgCostPerPerson;
@@ -120,6 +108,12 @@ public class AbstractAccount implements Serializable {
 	public void setParkingDesc(String parkingDesc) {
 		this.parkingDesc = parkingDesc;
 	}
+	public String getPaymentOptions() {
+		return paymentOptions;
+	}
+	public void setPaymentOptions(String paymentOptions) {
+		this.paymentOptions = paymentOptions;
+	}	
 	public List<String> getPaymentList() {
 		return paymentList;
 	}
@@ -180,6 +174,30 @@ public class AbstractAccount implements Serializable {
 	public void setAdditionalDetails(String additionalDetails) {
 		this.additionalDetails = additionalDetails;
 	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public Timestamp getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Timestamp createdDate) {
+		this.createdDate = createdDate;
+	}
+	public Timestamp getUpdatedDate() {
+		return updatedDate;
+	}
+	public void setUpdatedDate(Timestamp updatedDate) {
+		this.updatedDate = updatedDate;
+	}	
+	public int getDeleted() {
+		return deleted;
+	}
+	public void setDeleted(int deleted) {
+		this.deleted = deleted;
+	}		
 	
 	public Float getYelpRating() {
 		return yelpRating;

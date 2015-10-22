@@ -6,7 +6,7 @@ public interface TagDishDomainConstant {
 	public static final String ZIPCODE_TYPE = "zipcode";
 	public static final String DISH_TYPE = "dish";
 	public static final String DISH_SEARCH_TYPE = "dishsearch";
-	public static final String RESTAURANT_TYPE = "restuarant";
+	public static final String RESTAURANT_TYPE = "restaurant";
 	
 	// Notify Type
 	public static final String SEARCH_NOTIFY_TYPE ="Search";

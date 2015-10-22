@@ -65,6 +65,9 @@ public abstract class AbstractDish implements Serializable {
 	@Field(type=FieldType.String)
 	private String imageDishUrl;
 	
+	@Field(type=FieldType.Integer)
+	private int deleteFlag;
+	
 	@Field(type=FieldType.Float)
 	private Float rating;
 	
@@ -211,6 +214,15 @@ public abstract class AbstractDish implements Serializable {
 	public void setImageDishUrl(String imageDishUrl) {
 		this.imageDishUrl = imageDishUrl;
 	}
+	
+	public int getDeleteFlag() {
+		return deleteFlag;
+	}
+
+	public void setDeleteFlag(int deleteFlag) {
+		this.deleteFlag = deleteFlag;
+	}
+	
 
 	public Float getRating() {
 		return rating;
