@@ -6,23 +6,23 @@ public abstract class AbstractAddress implements Serializable {
 	
 	private static final long serialVersionUID = -3431320899397693687L;
 
-	private String streetNumber;
-	private String streetName;
+	private String address1;
+	private String address2;
 	private String city;
 	private String state;
 	private Long zipcode;
 	
-	public String getStreetNumber() {
-		return streetNumber;
+	public String getAddress1() {
+		return address1;
 	}
-	public void setStreetNumber(String streetNumber) {
-		this.streetNumber = streetNumber;
+	public void setAddress1(String address1) {
+		this.address1 = address1;
 	}
-	public String getStreetName() {
-		return streetName;
+	public String getAddress2() {
+		return address2;
 	}
-	public void setStreetName(String streetName) {
-		this.streetName = streetName;
+	public void setAddress2(String address2) {
+		this.address2 = address2;
 	}
 	public String getCity() {
 		return city;

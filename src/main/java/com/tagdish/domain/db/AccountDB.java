@@ -11,6 +11,7 @@ public class AccountDB extends AbstractAccount implements Serializable {
 	private Long accountId;
 	private String accountName;
 	private String accountType;
+	private GeoTargetDB geoTargetDB;
 		
 	public Long getAccountId() {
 		return accountId;
@@ -29,6 +30,12 @@ public class AccountDB extends AbstractAccount implements Serializable {
 	}
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
+	}
+	public GeoTargetDB getGeoTargetDB() {
+		return geoTargetDB;
+	}
+	public void setGeoTargetDB(GeoTargetDB geoTargetDB) {
+		this.geoTargetDB = geoTargetDB;
 	}
 
 }
