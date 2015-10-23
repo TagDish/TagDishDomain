@@ -8,14 +8,12 @@ public class DishDB extends AbstractDish implements Serializable {
 
 	private static final long serialVersionUID = 3042356729100540124L;
 
-	private Long menuId;
+	private MenuDB menuDB;
 	
-	public Long getMenuId() {
-		return menuId;
+	public MenuDB getMenuDB() {
+		return menuDB;
 	}
-	public void setMenuId(Long menuId) {
-		this.menuId = menuId;
+	public void setMenuDB(MenuDB menuDB) {
+		this.menuDB = menuDB;
 	}
-
-
 }

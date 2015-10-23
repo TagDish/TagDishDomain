@@ -1,6 +1,7 @@
 package com.tagdish.domain;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -67,6 +68,12 @@ public abstract class AbstractDish implements Serializable {
 	
 	@Field(type=FieldType.Integer)
 	private int deleteFlag;
+	
+	@Field(type=FieldType.Date)
+	private Timestamp createdDate;
+
+	@Field(type=FieldType.Date)
+	private Timestamp updatedDate;	
 	
 	@Field(type=FieldType.Float)
 	private Float rating;
@@ -222,8 +229,18 @@ public abstract class AbstractDish implements Serializable {
 	public void setDeleteFlag(int deleteFlag) {
 		this.deleteFlag = deleteFlag;
 	}
-	
-
+	public Timestamp getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Timestamp createdDate) {
+		this.createdDate = createdDate;
+	}
+	public Timestamp getUpdatedDate() {
+		return updatedDate;
+	}
+	public void setUpdatedDate(Timestamp updatedDate) {
+		this.updatedDate = updatedDate;
+	}	
 	public Float getRating() {
 		return rating;
 	}
